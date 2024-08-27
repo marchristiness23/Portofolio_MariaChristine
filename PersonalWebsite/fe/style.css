@@ -1,0 +1,377 @@
+body, html {
+    background-color: #F8EDE3;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center; 
+}
+
+main {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically if needed */
+  width: 100%;
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+.navbar {
+    background-color: #F8EDE3 !important;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the content of the navbar */
+}
+
+.page {
+    background-color: #F8EDE3; 
+    padding: 2rem;
+    min-height: 100vh; 
+}
+.bg-body-tertiary{
+  background-color: #F8EDE3 !important; 
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #C5705D;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    color: #C5705D;
+    border-bottom: 1px solid #C5705D;
+}
+.nav-link.active {
+    border-bottom: 2px solid #C5705D !important; 
+    font-weight: bold;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #F8EDE3; 
+    color: #C5705D;
+}
+
+.nav-link2 {
+    position: absolute;
+    right: 20px;  
+}
+
+.nav-link2 img {
+    width: 60px;
+    height: 60px;
+}
+
+li { 
+    display: inline; 
+    padding: 20px; 
+} 
+
+.half-circle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw; /* Adjust width to be 100% of viewport width */
+  height: 35vh; /* Adjust height to be 35% of viewport height */
+  background-color: rgba(223, 211, 195, 0.4);
+  border-radius: 50% 50% 0 0; /* Create the half-circle effect */
+  z-index: 20;
+}
+
+.svg-container {
+    position: absolute;
+    top: 20%; 
+    width: 100%;
+    height: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1; 
+}
+
+svg {
+    display: block;
+    font-size: 348px; 
+}
+
+.outlined-text {
+    fill: none;
+    stroke: #D0B8A8; 
+    stroke-width: 2px;
+    font-size: inherit;
+    font-weight: bold; 
+}
+
+.tools-header h1 {
+    color: rgba(197, 112, 93, 0.7);
+    font-weight: 900;
+    padding: 60px;
+    text-align: left;
+    margin-left: 3%;
+    font-size: 2.5rem; 
+}
+
+.tools-items-container {
+    display: flex;
+    justify-content: center;
+    gap: 8rem; 
+    flex-wrap: wrap; 
+    margin-bottom: 2%;
+}
+
+.tools-item {
+    background-color: rgba(208, 184, 168, 0.4);
+    width: 218px;
+    height: 151px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease, filter 0.4s ease;
+}
+
+.tools-item:hover {
+    background-color: rgba(208, 184, 168, 0.6); /* Slightly darker background on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add more prominent shadow on hover */
+}
+
+.tools-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.tools-item:hover img {
+    transform: scale(1.1); /* Slightly increase size of image on hover */
+    filter: brightness(1.2); /* Make image brighter on hover */
+}
+
+.tools-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    /* Smooth transition for overlay effect */
+}
+
+.card-body, .card-body2 {
+    text-align: left;
+    margin-top: 3.5%;
+    max-width: 80%; /* Adjust this value as needed */
+}
+
+.card-body2 {
+    text-align: right;
+    margin-top: 6%;
+}
+
+.card {
+    background-color: #F8EDE3; /* Light background for the card */
+    border: 1px solid #d1ad76; /* Border color matching the theme */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1.5rem; /* Adjust padding for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+    order: -1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Adjust font size for better readability */
+    font-weight: 600; /* Make title more prominent */
+    color: #bf9f6e; /* Consistent with the theme */
+    margin-bottom: 0.5rem; /* Space between title and text */
+}
+
+.card-text {
+    font-size: 1rem; /* Adjust font size for consistency */
+    color: #333; /* Darker color for better contrast */
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+
+.card a {
+    color: #bf9f6e; /* Link color consistent with theme */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Make link text slightly bold */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.card a:hover {
+    color: #d1ad76; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover for clarity */
+}
+
+/* Ensure the card image and text area fit within the card */
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.row.g-0 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.col-md-4, .col-md-8 {
+    padding: 0; /* Remove padding to prevent overflow */
+}
+
+.card-body, .card-body2 {
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Responsive breakpoints */
+@media (max-width: 767px) {
+
+  .card-body, .card-body2 {
+      max-width: 100%; /* Ensure text areas fit on mobile */
+  }
+
+  .card {
+      display: flex;
+      flex-direction: column; /* Stack children vertically */
+  }
+
+  .row.g-0 {
+      display: flex;
+      flex-direction: column; /* Stack columns vertically */
+  }
+
+  .col-md-4, .col-md-8 {
+      flex: 0 0 100%; /* Make each column take full width */
+  }
+
+  .col-md-4 {
+      order: 1; /* Make image appear first */
+  }
+
+  .col-md-8 {
+      order: 2; /* Make card body appear second */
+  }
+
+  .tools-items-container {
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+  .tools-item {
+      width: 100%;
+      max-width: 400px; /* Adjust the size for smaller screens */
+      height: auto;
+  }
+
+  .card img {
+      width: 100%; /* Make card images responsive */
+      height: auto;
+  }
+
+svg{
+    font-size: 26vw;
+    margin-left: -80px;
+}
+    .half-circle {
+        width: 120vw; /* Ensure full width on mobile */
+        height: 25vh; /* Adjust height for mobile */
+    }
+  .card-body, .card-body2 {
+    text-align: center; /* Center text for mobile */
+}
+
+.card a {
+    margin: 1rem auto; /* Center the link horizontally */
+}
+
+.card-body2 {
+    text-align: center; /* Ensure right-aligned text on mobile is centered */
+}
+.tools-header h1{
+    margin-top: 20px;
+  }
+  .tools-header h1{
+    margin-top: 20px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  svg{
+    font-size: 28vw;
+    margin-left: -60px;
+}
+
+
+    .tools-items-container {
+        flex-wrap: wrap;
+        gap: 4rem;
+    }
+
+    .tools-item {
+        width: 48%; /* Two items per row on tablets */
+    }
+
+    .card img {
+        max-width: 100%;
+    }
+
+    .half-circle {
+      width: 120vw; /* Ensure full width on tablets */
+      height: 30vh; /* Adjust height for tablets */
+  }
+  .tools-header h1{
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+
+.outlined-text {
+    font-size: 10vw; /* Menyesuaikan ukuran font untuk layar besar */
+}
+
+
+.half-circle {
+  width: 100vw; /* Ensure full width on large screens */
+  height: 35vh; /* Maintain height for desktop */
+}
+    .tools-items-container {
+        gap: 8rem;
+    }
+
+    .tools-item {
+        width: 218px;
+        height: 151px;
+    }
+    .tools-header h1{
+        margin-top: 20px;
+      }
+}
